@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: default_v{{ site.version }}
 title: About
 ---
 
@@ -7,6 +7,6 @@ title: About
   <h1 class="page-title">About</h1>
 
   {% assign about_page = site.pages | where: "title", "About" | first %}
-  {{ about_page.content | remove: "---" | remove: "layout: page" | remove: "title: About" | remove: "---" | markdownify
+  {{ about_page.content | remove: "---" | remove: "layout: page_v0.0.1" | remove: "title: About" | remove: "---" | markdownify
   }}
 </div>
