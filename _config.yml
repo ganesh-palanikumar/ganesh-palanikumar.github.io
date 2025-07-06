@@ -1,21 +1,26 @@
 # Dependencies
-markdown:         redcarpet
-highlighter:      pygments
+markdown:         kramdown
+highlighter:      rouge
 
 # Permalinks
 permalink:        pretty
-relative_permalinks: true
+
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-gist
 
 # Setup
-title:            Hyde
-tagline:          'A Jekyll theme'
-description:      'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
+title:            Ganesh Palanikumar
+tagline:          'Software Builder'
+description:      ''
 url:              http://hyde.getpoole.com
 baseurl:          /
 
 author:
-  name:           'Mark Otto'
-  url:            https://twitter.com/mdo
+  name:           'Ganesh Palanikumar'
+  email:          'ganeshpkumar93@gmail.com'
+  # url:            https://twitter.com/ganeshpalanikumar
 
 paginate:         5
 
@@ -23,4 +28,5 @@ paginate:         5
 version:          2.1.0
 
 github:
-  repo:           https://github.com/poole/hyde
+  repo:           https://github.com/ganesh-palanikumar/ganesh-palanikumar.github.io
+  

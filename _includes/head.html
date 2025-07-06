@@ -8,9 +8,9 @@
 
   <title>
     {% if page.title == "Home" %}
-      {{ site.title }} &middot; {{ site.tagline }}
+    {{ site.title }} &middot; {{ site.tagline }}
     {% else %}
-      {{ page.title }} &middot; {{ site.title }}
+    {{ page.title }} &middot; {{ site.title }}
     {% endif %}
   </title>
 
@@ -21,9 +21,38 @@
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
 
   <!-- Icons -->
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.baseurl }}public/apple-touch-icon-144-precomposed.png">
-                                 <link rel="shortcut icon" href="{{ site.baseurl }}public/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144"
+    href="{{ site.baseurl }}public/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="{{ site.baseurl }}public/favicon.ico">
 
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+
+  <!-- CryptoJS for MD5 hashing -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+
+  <!-- Gravatar Avatar Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Get the email from Jekyll's site configuration
+      const email = "{{ site.author.email }}";
+
+      if (email && email !== "your-email@example.com") {
+        // Clean the email
+        const cleanEmail = email.trim().toLowerCase();
+
+        // Generate MD5 hash
+        const hash = CryptoJS.MD5(cleanEmail).toString();
+
+        // Construct the Gravatar URL
+        const gravatarUrl = `https://www.gravatar.com/avatar/${hash}?s=240&d=mp`;
+
+        // Set the image src
+        const avatarImg = document.getElementById('gravatar-avatar');
+        if (avatarImg) {
+          avatarImg.src = gravatarUrl;
+        }
+      }
+    });
+  </script>
 </head>
