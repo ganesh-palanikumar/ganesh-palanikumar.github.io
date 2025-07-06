@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post_v{{ site.version }}
 title: What's Jekyll?
 publish: true
 ---

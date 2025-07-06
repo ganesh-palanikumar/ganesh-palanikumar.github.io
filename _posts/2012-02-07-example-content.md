@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post_v{{ site.version }}
 title: Example content
 publish: true
 ---
