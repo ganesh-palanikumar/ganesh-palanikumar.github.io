@@ -88,6 +88,10 @@ def rename_file_with_version(file_path, new_version):
     new_filename = f"{base_name}_v{new_version}{extension}"
     new_path = file_path.parent / new_filename
     
+    if new_path == file_path:
+        print(f"Warning: {file_path} is already at the correct version, skipping...")
+        return False
+    
     try:
         # Remove old versioned file if it exists
         if new_path.exists():
