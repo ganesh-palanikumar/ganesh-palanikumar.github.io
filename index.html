@@ -4,7 +4,7 @@ title: About
 ---
 
 <div class="page">
-  <h1 class="page-title">About</h1>
+  <h1 class="page-title">Welcome</h1>
 
   {% assign about_page = site.pages | where: "title", "About" | first %}
   {{ about_page.content | remove: "---" | remove: "layout: page" | remove: "title: About" | remove: "---" | markdownify
