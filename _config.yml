@@ -14,8 +14,8 @@ plugins:
 title:            Ganesh Palanikumar
 tagline:          'Software Builder'
 description:      ''
-url:              http://hyde.getpoole.com
-baseurl:          /
+url:              https://ganesh-palanikumar.github.io
+baseurl:          ""
 
 author:
   name:           'Ganesh Palanikumar'
