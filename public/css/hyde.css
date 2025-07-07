@@ -84,6 +84,10 @@ html {
 .sidebar-avatar {
   margin-bottom: 1rem;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
 }
 
 .avatar {
