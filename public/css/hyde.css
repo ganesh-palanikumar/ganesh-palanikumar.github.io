@@ -293,3 +293,23 @@ a.sidebar-nav-item:focus {
 .theme-base-0f .related-posts li a:hover {
   color: #8f5536;
 }
+
+.resume-download {
+  background: #f0f8ff;
+  border: 2px solid #007acc;
+  border-radius: 8px;
+  padding: 1em;
+  margin: 1.5em 0;
+  text-align: center;
+}
+
+.resume-link {
+  font-size: 1.2em;
+  color: #007acc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.resume-link:hover {
+  text-decoration: underline;
+}
