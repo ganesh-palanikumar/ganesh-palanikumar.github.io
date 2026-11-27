@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>{{ page.title | escape }} · Ganesh Palanikumar</title>
+<style>
+:root{color-scheme:light;--paper:#f4f6ed;--ink:#1b3528;--accent:#1b6243;--line:#b6c7b2}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:1rem/1.65 system-ui,sans-serif}
+.wrap{width:min(52rem,calc(100% - 2.5rem));margin:auto}
+header, footer, nav{display:flex;align-items:center;flex-wrap:wrap;gap:.65rem 1.25rem}
+header,footer{justify-content:space-between;padding:1.2rem 0}
+header{border-bottom:1px solid var(--line)}
+footer{border-top:1px solid var(--line)}
+main{padding:3.5rem 0 2rem}
+a{color:var(--accent);text-underline-offset:.2em}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+.skip{position:absolute;left:1rem;top:-5rem;background:var(--paper);padding:.5rem}
+.skip:focus{top:1rem}
+h1,h2,h3,p{margin:0}
+h1{font:italic 400 clamp(3rem,9vw,6rem)/1.05 Georgia,serif;letter-spacing:-.055em}
+h2{font-size:1.45rem;line-height:1.25}
+h3{font-size:1.1rem}
+p+p{margin-top:.55rem}
+.intro{padding-bottom:2.5rem}
+.intro p{max-width:58ch;margin-top:.85rem}
+.row{border-top:1px solid var(--line);display:grid;grid-template-columns:10rem 1fr;gap:.75rem 1rem;padding:1.4rem 0}
+.stack>*+*{margin-top:1rem}
+@media(max-width:36rem){main{padding-top:2rem}.row{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+{% assign home = '/revamp/' | relative_url %}
+{% assign writing = '/revamp/writing/' | relative_url %}
+<div class="wrap">
+<header><a href="{{ home }}"><strong>Ganesh Palanikumar</strong></a>
+<nav aria-label="Main"><a href="{{ home }}#work">Work</a><a href="{{ home }}#experience">Experience</a><a href="{{ writing }}">Writing</a><a href="{{ home }}#resume">Résumé</a></nav></header>
+<main id="content">{{ content }}</main>
+<footer><strong>San Jose, California</strong><nav aria-label="Contact"><a href="https://github.com/ganesh-palanikumar">GitHub</a><a href="mailto:ganeshpkumar93@gmail.com">Email</a></nav></footer>
+</div>
+</body>
+</html>
