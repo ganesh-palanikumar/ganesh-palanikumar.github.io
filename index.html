@@ -1,12 +1,31 @@
 ---
-layout: default
-title: About
+layout: personal-revamp
+title: Home
 ---
-
-<div class="page">
-  <h1 class="page-title">Welcome</h1>
-
-  {% assign about_page = site.pages | where: "title", "About" | first %}
-  {{ about_page.content | remove: "---" | remove: "layout: page" | remove: "title: About" | remove: "---" | markdownify
-  }}
+<section class="intro">
+<h1>Hi, I’m Ganesh.</h1>
+<p>I’m a software engineer in San Jose. I build production AI agents and the backend systems that make them useful. At Omneky, I lead engineering decisions across the product and built its AI agent from the ground up.</p>
+</section>
+<section class="row" id="work">
+<h2>Selected work</h2>
+<div class="stack">
+<article><h3>Omneky AI agent</h3><p>Built the agent end to end, from the initial architecture through production.</p></article>
+<article><h3>Ad platform integrations</h3><p>Designed and maintained the importers and launchers that connect Omneky to external ad platforms.</p></article>
 </div>
+</section>
+<section class="row" id="experience">
+<h2>Experience</h2>
+<div class="stack">
+<p><strong>Omneky.</strong> Backend engineering and technical leadership.</p>
+<p><strong>Apple.</strong> Software engineering in ML privacy.</p>
+<p><strong>Education.</strong> MS from Carnegie Mellon University and BTech in Computer Science from IIT Madras. SIGMETRICS 2020 Best Paper.</p>
+</div>
+</section>
+<section class="row" id="writing">
+<h2>Writing</h2>
+<div><p>I’m planning a series on building and operating AI agents in production.</p><p><a href="{{ '/writing/' | relative_url }}">Explore writing</a></p></div>
+</section>
+<section class="row" id="resume">
+<h2>Résumé</h2>
+<div>{% if site.resume_url %}<a href="{{ site.revamp_resume_url | relative_url }}" download>Download résumé (PDF)</a>{% else %}<p><a href="mailto:ganeshpkumar93@gmail.com?subject=Résumé%20request">Request my résumé by email</a></p>{% endif %}</div>
+</section>
